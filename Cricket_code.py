@@ -29,13 +29,13 @@ target_over = [0]
 
 for i in range(1,301):
     if i > 270:
-        prob = [40,20,10,5,20,20,10]
+        prob = [40,20,10,5,20,20,5]
     elif i <61:
         prob = [80,30,1,0.5,20,15,5]
     else:
         prob=[70,80,10,3,5,2,5]
     if team1_wicket > 7:
-        prob = [0.6,0.6,0.1,0.01,0.02,0.01,0.7]
+        prob = [0.6,0.6,0.1,0.01,0.02,0.01,0.5]
     run1 = random.choices(ch,prob)[0]
     
     if run1 =='w':
@@ -56,7 +56,7 @@ for i in range(1,301):
 for k in range(1,301):
    
     if k > 270:
-        prob = [40,20,10,5,20,20,10]
+        prob = [40,20,10,5,20,20,5]
     elif k <61:
         prob = [80,30,1,0.5,20,15,5]
     else:
