@@ -1,8 +1,14 @@
+# modules 
+
 import matplotlib.pyplot as plt
+
 import random 
+
+# chances for a ball
 
 ch = [0,1,2,3,4,6,'w']
 
+# variables like runs wickets over and stats
 
 team1_run = 0
 team1_wicket = 0
@@ -18,6 +24,9 @@ run_graph2 = [0]
 ball_graph2 = [0]
 target_run = [0] 
 target_over = [0]
+
+# ball by ball simulation of England batting 
+
 for i in range(1,301):
     if i > 270:
         prob = [40,20,10,5,20,20,10]
@@ -42,6 +51,7 @@ for i in range(1,301):
     if team1_wicket == 10:
         break 
     
+s ball by ball simulation of New Zealand batting 
 
 for k in range(1,301):
    
@@ -68,24 +78,40 @@ for k in range(1,301):
     if team2_wicket == 10 or team2_run > team1_run:
         break
     
-         
+# Target graph or line
+       
 for j in range(0,51):
     rr = (team1_run+1) *j / 50
     target_run.append(rr)
     target_over.append(j)
-    
 
+# To show in graph (England)
 
 plt.plot(ball_graph1,run_graph1,color = 'red',label = f' ENGLAND       : {team1_run}-{team1_wicket}({i//6}.{i%6})')
 
+# To show New Zealand batting graph 
+
 plt.plot(ball_graph2,run_graph2,color = 'black',label = f' NEW ZEALAND : {team2_run}-{team2_wicket}({k//6}.{k%6})')
+
+# New Zealand runs after halfway stage 
+
 if k > 150:
     plt.text(25,run_graph2[150],f'                      NZ after 25 :  {run_graph2[150]}-{wicket}')
 
+# Target line in graph 
+
 plt.plot(target_over,target_run, linestyle = '--',color = 'green')
 
+# Wickets of England 
+
 plt.scatter(wicket_ball1,wicket_run1,marker ='o',color = 'blue')
+
+# Wickets of New Zealand 
+
 plt.scatter(wicket_ball2,wicket_run2,marker ='o',color = 'grey')
+
+# Result 
+
 if team1_run > team2_run:
     plt.text(20,0,f'Result:', color='brown')
     plt.text(25,-5,f' ENGLAND  won the match by {team1_run - team2_run} runs')
@@ -95,6 +121,9 @@ elif team2_run > team1_run:
 else:
     plt.text(20,0,f'Result:', color='brown')
     plt.text(25,-5,f' Match tied ')
+
+# scale of graph 
+
 plt.xticks([0,5,10,15,20,25,30,35,40,45,50])
 plt.yticks([0,30,60,90,120,150,180,210,240,270,300,330,360,390])
 
