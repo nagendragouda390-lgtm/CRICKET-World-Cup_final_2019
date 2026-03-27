@@ -1,5 +1,5 @@
-# ODI
-Cricket match
+## One day internationals 
+NEWZEALAND vs ENGLAND 
 
 ## 📊 THE FINAL 
 
@@ -23,6 +23,9 @@ explotion at death overs
 # libraries and modules used
 matplotlibs 
 random
+
+#### Phyton 
+
 
 
 
