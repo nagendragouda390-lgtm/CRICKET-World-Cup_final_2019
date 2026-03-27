@@ -1,6 +1,9 @@
 ## One day internationals 
 NEWZEALAND vs ENGLAND 
-<img src ="3177.jpg" width ="80" height = "80" >
+
+
+<h2> Final </h2>
+<img src ="3177.jpg" width ="380" height = "480" >
 ## 📊 THE FINAL 
 
 ![Match Graph](file_00000000d74071faac31f45eb8af0ec6.png)
