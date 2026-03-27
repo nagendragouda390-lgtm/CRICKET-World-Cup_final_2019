@@ -4,7 +4,8 @@ NEWZEALAND vs ENGLAND
 
 <h2> Final </h2>
 <img src ="3177.jpg" width ="380" height = "480" >
-## 📊 THE FINAL 
+
+<h2>The Final </h2>
 
 ![Match Graph](file_00000000d74071faac31f45eb8af0ec6.png)
 
