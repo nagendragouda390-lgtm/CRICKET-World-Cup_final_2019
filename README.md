@@ -10,15 +10,15 @@ NEWZEALAND vs ENGLAND
 ![Match Graph](file_00000000d74071faac31f45eb8af0ec6.png)
 
 <h2>📊 Match Output</h2>
-<h1>ENGLAND</h1>
 <img src ="IMG_20260326_132552.jpg" width="300"  height = "400" >
+
+
+## Teams
+England vs New Zealand 
+<h1>ENGLAND </h1>
+<img src="England_cricket_team_logo.svg" width="300"  height = "300" >
 <h1>NEW ZEALAND </h1>
 <img src = "new-zealand-cricket-logo-png_seeklogo-370601.png" width = "300" height = "300" >
-
-# Teams
-England vs New Zealand 
-
-<img src="England_cricket_team_logo.svg" width="300"  height = "300" >
 
 
 # overs
