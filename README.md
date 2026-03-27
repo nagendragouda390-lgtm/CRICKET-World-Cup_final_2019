@@ -11,7 +11,7 @@ NEWZEALAND vs ENGLAND
 
 <h2>📊 Match Output</h2>
 <img src="IMG_20260326_132552.jpg" width="300"  height = "400" >
-< img src = "new-zealand-cricket-logo-png_seeklogo-370601.png">
+< img src = "new-zealand-cricket-logo-png_seeklogo-370601.png" width = "300" height = "300">
 
 # Teams
 England vs New Zealand 
