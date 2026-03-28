@@ -1,8 +1,9 @@
-# modules 
 
-import matplotlib.pyplot as plt
+# importing libraries 
+import matplotlib.pyplot as plt # to show output graphically
 
-import random 
+import random  # to generate random values
+
 
 # chances for a ball
 
@@ -24,25 +25,24 @@ run_graph2 = [0]
 ball_graph2 = [0]
 target_run = [0] 
 target_over = [0]
-ball1 =0
 ball2 = 0
+ball1 = 0
 
 # ball by ball simulation of England batting 
 
 while ball1 < 300:
     if ball1 > 270:
-        prob = [40,20,10,5,20,20,5]
+        prob = [40,20,10,5,20,20,5,6]
     elif ball1 <61:
-        prob = [80,30,1,0.5,20,15,5]
+        prob = [80,30,1,0.5,20,15,5,6]
     else:
-        prob=[70,80,10,3,5,2,5]
+        prob=[70,80,10,3,5,2,5,6]
     if team1_wicket > 7:
-        prob = [0.6,0.6,0.1,0.01,0.02,0.01,0.5]
+        prob = [0.6,0.6,0.1,0.01,0.02,0.01,0.5,0.5]
     run1 = random.choices(ch,prob)[0]
     if run1 == 'wd':
         team1_run += 1
-        run_graph1.append(team1_run)
-        ball_graph1.append(ball1)
+        
     elif run1 =='w':
         ball1 += 1
         wicket_run1.append(team1_run)
@@ -63,28 +63,30 @@ while ball1 < 300:
 while ball2 < 300:
    
     if ball2 > 270:
-        prob = [40,20,10,5,20,20,5]
+        prob = [40,20,10,5,20,20,5,6]
     elif ball2 <61:
-        prob = [80,30,1,0.5,20,15,5]
+        prob = [80,30,1,0.5,20,15,5,6]
     else:
-        prob=[70,80,10,3,5,2,5]
+        prob=[70,80,10,3,5,2,5,6]
     if team2_wicket > 7:
-        prob = [0.6,0.6,0.1,0.01,0.02,0.01,0.7]
+        prob = [0.6,0.6,0.1,0.01,0.02,0.01,0.5,0.5]
     run2 = random.choices(ch,prob)[0]
     if run2 == 'wd' :
         team1_run += 1
-        run_graph2.append(team1_run)
-        ball_graph2.append(ball2)
+        
     elif run2 =='w':
+        ball2 += 1
         wicket_run2.append(team2_run)
         wicket_ball2.append(ball2/6)
         team2_wicket += 1
     else:
+        ball2 += 1
         team2_run += run2
         run_graph2.append(team2_run)
         ball_graph2.append(ball2/6)
-    if k == 150:
-         wicket = team2_wicket
+    if ball2 == 150:
+        wicket = team1_wicket
+    
     if team2_wicket == 10 or team2_run > team1_run:
         break
     
@@ -97,15 +99,15 @@ for j in range(0,51):
 
 # To show in graph (England)
 
-plt.plot(ball_graph1,run_graph1,color = 'red',label = f' ENGLAND       : {team1_run}-{team1_wicket}({i//6}.{i%6})')
+plt.plot(ball_graph1,run_graph1,color = 'red',label = f' ENGLAND       : {team1_run}-{team1_wicket}({ball1//6}.{ball1%6})')
 
 # To show New Zealand batting graph 
 
-plt.plot(ball_graph2,run_graph2,color = 'black',label = f' NEW ZEALAND : {team2_run}-{team2_wicket}({k//6}.{k%6})')
+plt.plot(ball_graph2,run_graph2,color = 'black',label = f' NEW ZEALAND : {team2_run}-{team2_wicket}({ball2//6}.{ball2%6})')
 
 # New Zealand runs after halfway stage 
 
-if k > 150:
+if ball2 > 150:
     plt.text(25,run_graph2[150],f'                      NZ after 25 :  {run_graph2[150]}-{wicket}')
 
 # Target line in graph 
@@ -127,7 +129,7 @@ if team1_run > team2_run:
     plt.text(25,-5,f' ENGLAND  won the match by {team1_run - team2_run} runs')
 elif team2_run > team1_run:
     plt.text(2,0,f'Result:', color='brown')
-    plt.text(5,-5,f' NEW ZEALAND won the match by {10-team2_wicket} wickets {300-k} balls remaining ')
+    plt.text(5,-5,f' NEW ZEALAND won the match by {10-team2_wicket} wickets {300-ball1} balls remaining ')
 else:
     plt.text(20,0,f'Result:', color='brown')
     plt.text(25,-5,f' Match tied ')
@@ -141,4 +143,4 @@ plt.yticks([0,30,60,90,120,150,180,210,240,270,300,330,360,390])
 plt.legend() 
 plt.grid()    
 plt.show()  
-
+        
