@@ -24,6 +24,8 @@ run_graph2 = [0]
 ball_graph2 = [0]
 target_run = [0] 
 target_over = [0]
+ball1 =0
+ball2 = 0
 
 # ball by ball simulation of England batting 
 
